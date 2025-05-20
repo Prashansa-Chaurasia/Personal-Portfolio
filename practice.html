@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width:300px;
+            position: absolute;
+        }
+        .one{
+            background-color: aquamarine;
+            top: 100px;
+            left:50px
+        }
+        .two{
+            background-color:red;
+            top: 150px;
+            left:100px
+        }
+        .three{
+            background-color:rebeccapurple;
+            top: 200px;
+            left:150px
+        }
+    </style>
+    <script>
+
+var topo="p3";
+        function move(id) {
+            alert("hi")
+            var old=document.getElementById(topo);
+            var new1=document.getElementById(id);
+            old.style.zIndex=0;
+            new1.style.zIndex=10;
+            topo=id;
+        }
+        function reset(id){
+            document.getElementById(id).style.zIndex=0;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="one" id="p1" onmouseover="move(id)" onmouseout="reset(id)">frame 1</div>
+    <div class="two" id="p2" onmouseover="move(id)" onmouseout="reset(id)">frame 2</div>
+    <div class="three" id="p3" onmouseover="move(id)" onmouseout="reset(id)">frame 3</div>
+   </body>
+</html>
